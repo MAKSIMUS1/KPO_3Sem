@@ -1,0 +1,4 @@
+﻿  Assembling LP_asm01b.asm...
+LINK : warning LNK4044: нераспознанный параметр "/utf-16"; игнорируется
+LINK : warning LNK4044: нераспознанный параметр "/utf-16"; игнорируется
+  LP_asm01b.vcxproj -> D:\BSTU\Kurs_2_1\KPO\Assembler\Debug\LP_asm01b.exe

@@ -1,0 +1,13 @@
+﻿  Assembling assembler_code.asm...
+assembler_code.asm(1): error A2008: syntax error : .
+assembler_code.asm(2): error A2008: syntax error : .
+assembler_code.asm(8): error A2008: syntax error : .
+assembler_code.asm(28): error A2070: invalid instruction operands
+assembler_code.asm(29): error A2070: invalid instruction operands
+assembler_code.asm(30): error A2070: invalid instruction operands
+assembler_code.asm(40): error A2070: invalid instruction operands
+assembler_code.asm(41): error A2070: invalid instruction operands
+assembler_code.asm(42): error A2070: invalid instruction operands
+assembler_code.asm(50): error A2008: syntax error : main
+assembler_code.asm(50): error A2088: END directive required at end of file
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\assembler_code.obj" /W3 /errorReport:prompt  /Taassembler_code.asm" с кодом "1".

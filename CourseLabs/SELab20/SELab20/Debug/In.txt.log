@@ -1,0 +1,12 @@
+Тест: без ошибок 
+Тест: без ошибок 
+-----Протокол----- 
+Выполнено: 10.11.2022 четверг 20:00:36
+-----Параметры----- 
+-in:	D:\BSTU\Kurs_2_1\KPO\CourseLabs\SELab20\SELab20\Debug\In.txt
+-log:	D:\BSTU\Kurs_2_1\KPO\CourseLabs\SELab20\SELab20\Debug\In.txt.log
+-out:	D:\BSTU\Kurs_2_1\KPO\CourseLabs\SELab20\SELab20\Debug\In.txt.out
+-----Исходные данные----- 
+Количество символов: 672
+Проигнорировано: 0
+Количество строк: 35

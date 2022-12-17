@@ -1,0 +1,94 @@
+Microsoft (R) Macro Assembler Version 14.33.31629.0	    09/15/22 19:06:22
+asm02.asm						     Page 1 - 1
+
+
+				.586
+				.MODEL FLAT, STDCALL
+				includelib kernel32.lib
+				ExitProcess PROTO : DWORD
+				MessageBoxA PROTO : DWORD, : DWORD, : DWORD, : DWORD
+				.STACK 4096
+
+ 00000000			.CONST
+ 00000000			.DATA
+ 00000000 00000003		ptra dword 3
+ 00000004 00000002		ptrb dword 2
+
+ = 00000000			MB_OK EQU 0
+ 00000008 CC EE FF 20 EF	STR1 DB "Моя первая программа", 0
+	   E5 F0 E2 E0 FF
+	   20 EF F0 EE E3
+	   F0 E0 EC EC E0
+	   00
+ 0000001D D0 E5 E7 F3 EB	STR2 DB "Результат сложения = ", 0
+	   FC F2 E0 F2 20
+	   F1 EB EE E6 E5
+	   ED E8 FF 20 3D
+	   20 00
+ 00000033 00000000		HW	 DD ?
+
+ 00000000			.CODE
+ 00000000			main PROC
+					
+ 00000000			START :
+ 00000000  A1 00000000 R		mov	eax, ptra
+ 00000005  03 05 00000004 R		add	eax, ptrb 
+ 0000000B  83 C0 30			add eax, 30h
+ 0000000E  00 05 00000032 R		add STR2 + 21, al
+
+					INVOKE MessageBoxA, HW, OFFSET STR2, OFFSET STR1, MB_OK
+					
+ 0000002B  6A 00			push 0
+ 0000002D  E8 00000000 E		call ExitProcess
+ 00000032			main ENDP
+
+				end main
+Microsoft (R) Macro Assembler Version 14.33.31629.0	    09/15/22 19:06:22
+asm02.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+CONST  . . . . . . . . . . . . .	32 Bit	 00000000 Para	  Public  'CONST'	 ReadOnly
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000037 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000032 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+MessageBoxA  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000032 Public STDCALL
+  START  . . . . . . . . . . . .	L Near	 00000000 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+HW . . . . . . . . . . . . . . .	DWord	 00000033 _DATA	
+MB_OK  . . . . . . . . . . . . .	Number	 00000000h   
+STR1 . . . . . . . . . . . . . .	Byte	 00000008 _DATA	
+STR2 . . . . . . . . . . . . . .	Byte	 0000001D _DATA	
+ptra . . . . . . . . . . . . . .	DWord	 00000000 _DATA	
+ptrb . . . . . . . . . . . . . .	DWord	 00000004 _DATA	
+
+	   0 Warnings
+	   0 Errors

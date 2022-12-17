@@ -1,0 +1,5 @@
+﻿  Serialization.cpp
+  serMain.cpp
+D:\BSTU\Kurs_2_1\KPO\asm\Lab4_KPO\Lab_4_KPO\Lab_4_KPO\serMain.cpp(6,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  Создание кода...
+  Lab_4_KPO.vcxproj -> D:\BSTU\Kurs_2_1\KPO\asm\Lab4_KPO\Lab_4_KPO\Debug\Serialization.exe

@@ -1,0 +1,87 @@
+Microsoft (R) Macro Assembler (x64) Version 14.33.31629.0   09/15/22 18:31:39
+asm02.asm						     Page 1 - 1
+
+
+				.568P
+asm02.asm(1) : error A2008:syntax error : .
+				.MODEL FLAT, STDCALL
+asm02.asm(2) : error A2008:syntax error : .
+				includelib kernel32.lib
+				ExitProcess PROTO : DWORD
+				MessageBoxA PROTO : DWORD, : DWORD, : DWORD, : DWORD
+				.STACK 4096
+asm02.asm(6) : error A2008:syntax error : .
+
+ 00000000			.CONST
+ 00000000			.DATA
+ 00000000 00000003		ptra dword 3
+ 00000004 00000002		ptrb dword 2
+ 00000008 00000000		result dword ?
+
+ = 00000000			MB_OK EQU 0
+ 0000000C CC EE FF 20 EF	STR1 DB "Моя первая программа", 0
+	   E5 F0 E2 E0 FF
+	   20 EF F0 EE E3
+	   F0 E0 EC EC E0
+	   00
+ 00000021 D0 E5 E7 F3 EB	STR2 DB "Результат сложения = ", 0
+	   FC F2 E0 F2 20
+	   F1 EB EE E6 E5
+	   ED E8 FF 20 3D
+	   20 00
+ 00000037 00000000		HW	 DD ?
+
+ 00000000			.CODE
+ 00000000			main PROC
+					
+ 00000000			START :
+ 00000000  8B 05 00000000 R		mov	eax, ptra
+ 00000006  03 05 00000004 R		add	eax, ptrb 
+ 0000000C  83 C0 30			add eax, 30h
+ 0000000F  00 05 00000036 R		add STR2 + 21, al
+
+					INVOKE MessageBoxA, HW, OFFSET STR2, OFFSET STR1, MB_OK
+asm02.asm(28) : error A2008:syntax error : MessageBoxA
+					
+ 00000015  6A 00			push 0
+ 00000017  E8 00000000 E		call ExitProcess
+ 0000001C			main ENDP
+
+				end main
+Microsoft (R) Macro Assembler (x64) Version 14.33.31629.0   09/15/22 18:31:39
+asm02.asm						     Symbols 2 - 1
+
+
+
+
+Segments:
+
+                N a m e                  Length   Align   Class
+
+CONST  . . . . . . . . . . . . .	 00000000 16	  'CONST'	 ReadOnly
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P 	 00000000 Length= 00000000 External
+MessageBoxA  . . . . . . . . . .	P 	 00000000 Length= 00000000 External
+main . . . . . . . . . . . . . .	P 	 00000000 _TEXT	Length= 0000001C Public
+  START  . . . . . . . . . . . .	L 	 00000000 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+HW . . . . . . . . . . . . . . .	DWord	 00000037 _DATA	
+MB_OK  . . . . . . . . . . . . .	Number	 00000000h   
+STR1 . . . . . . . . . . . . . .	Byte	 0000000C _DATA	
+STR2 . . . . . . . . . . . . . .	Byte	 00000021 _DATA	
+ptra . . . . . . . . . . . . . .	DWord	 00000000 _DATA	
+ptrb . . . . . . . . . . . . . .	DWord	 00000004 _DATA	
+result . . . . . . . . . . . . .	DWord	 00000008 _DATA	
+
+	   0 Warnings
+	   6 Errors

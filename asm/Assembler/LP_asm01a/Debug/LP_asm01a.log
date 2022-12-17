@@ -1,0 +1,3 @@
+﻿  Assembling LP_asm01a.asm...
+LINK : warning LNK4044: нераспознанный параметр "/utf-8"; игнорируется
+  LP_asm01a.vcxproj -> D:\BSTU\Kurs_2_1\KPO\Assembler\Debug\LP_asm01a.lib

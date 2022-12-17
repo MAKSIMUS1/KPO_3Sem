@@ -1,0 +1,97 @@
+01 tfi(ti,ti)
+02 {
+03 dti;
+04 i=iv(ivi);
+05 ri;
+06 };
+07 tfi(ti,ti)
+08 {
+09 dti;
+10 dtfi(ti,ti,
+11 ti);
+12 i=i(i,l,l)vi;
+13 ri;
+14 };
+15 
+16 m{
+17 dti;
+18 dti;
+19 dti;
+20 dti;
+21 dti;
+22 dti;
+23 dti(ti);
+24 i=l;
+25 i=l;
+26 i=l;
+27 i=l;
+28 i=i(i,i);
+29 i=i(i,i);
+30 p;
+31 pi;
+32 pi;
+33 pi(i);
+34 rl;
+35 };
+
+          |Name |     |Type |       |ID type |          |Line |         |Value |        |Length |             
+        fi        integer        Функция              3              0               
+
+            fix        integer       Параметр              6              0               
+
+            fiy        integer       Параметр              9              0               
+
+            fiz        integer     Переменная             16              0               
+
+             fs         string        Функция             39              ""              [0]
+
+            fsa         string       Параметр             42              ""              [0]
+
+            fsb         string       Параметр             45              ""              [0]
+
+            fsc         string     Переменная             52              ""              [0]
+
+         substr         string        Функция             58              ""              [0]
+
+        substra         string       Параметр             61              ""              [0]
+
+        substrp        integer       Параметр             64              0               
+
+        substrn        integer       Параметр             68              0               
+
+             L1        integer        Литерал             78              1               
+
+             L2        integer        Литерал             80              3               
+
+          mainx        integer     Переменная             99              0               
+
+          mainy        integer     Переменная            104              0               
+
+          mainz        integer     Переменная            109              0               
+
+         mainsa         string     Переменная            114              ""              [0]
+
+         mainsb         string     Переменная            119              ""              [0]
+
+         mainsc         string     Переменная            124              ""              [0]
+
+         strlen        integer        Функция            129              0               
+
+        strlenp         string       Параметр            132              ""              [0]
+
+             L3        integer        Литерал            138              1               
+
+             L4        integer        Литерал            143              5               
+
+             L5         string        Литерал            148              "1234567890"              [10]
+
+             L6         string        Литерал            153              "1234567890"              [10]
+
+             L7        integer        Литерал            195              0               
+
+   
+
+   
+
+               
+
